@@ -1,3 +1,4 @@
+"use strict";
 /*
 
 Welcome to:
@@ -75,35 +76,26 @@ Exercise:
     Given the data, define the interface "User" and use it accordingly.
 
 */
-
-export interface User {
-  name: string;
-  age: number;
-  occupation: string;
-}
-
-//TODO: What is the difference between type aliases and interfaces? When should I use one vs the other?
-
-export const users: User[] = [
-  {
-    name: "Max Mustermann",
-    age: 25,
-    occupation: "Chimney sweep",
-  },
-  {
-    name: "Kate Müller",
-    age: 23,
-    occupation: "Astronaut",
-  },
+exports.__esModule = true;
+exports.logPerson = exports.users = void 0;
+exports.users = [
+    {
+        name: "Max Mustermann",
+        age: 25,
+        occupation: "Chimney sweep"
+    },
+    {
+        name: "Kate Müller",
+        age: 23,
+        occupation: "Astronaut"
+    },
 ];
-
-export function logPerson(user: User) {
-  console.log(` - ${user.name}, ${user.age}`);
+function logPerson(user) {
+    console.log(" - ".concat(user.name, ", ").concat(user.age));
 }
-
+exports.logPerson = logPerson;
 console.log("Users:");
-users.forEach(logPerson);
-
+exports.users.forEach(logPerson);
 /* In case if you are stuck:
 
 // https://www.typescriptlang.org/docs/handbook/2/objects.html
