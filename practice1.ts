@@ -101,9 +101,6 @@ export function logPerson(user: User) {
   console.log(` - ${user.name}, ${user.age}`);
 }
 
-console.log("Users:");
-users.forEach(logPerson);
-
 /* In case if you are stuck:
 
 // https://www.typescriptlang.org/docs/handbook/2/objects.html
